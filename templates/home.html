@@ -1,0 +1,13 @@
+{% extends 'base.html'  %}
+{% block content %}
+
+    <form action="/madlib" class="madlibs_form">
+        {% for word in words %}
+        <div class="form_input">
+            <label for="">{{word}}: </label>
+            <input type="text" id='{{word}}' name="{{word}}">
+        </div>
+        {% endfor %}
+        <button>Submit</button>
+    </form>
+{% endblock%}
